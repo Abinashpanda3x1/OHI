@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>OHI-Gallery</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <!-- Gallery Section -->
+    <section class="container">
+        <h2 class="header">OHI-Gallery</h2>
+        <div class="gallery">
+            <div class="gallery-item">
+                <img src="images/photo1.jpg" alt="Event Photo 1">
+            </div>
+            <div class="gallery-item">
+                <img src="images/photo2.jpg" alt="Event Photo 2">
+            </div>
+            <div class="gallery-item">
+                <img src="images/photo3.jpg" alt="Event Photo 3">
+            </div>
+            <div class="gallery-item">
+                <img src="images/photo4.jpg" alt="Event Photo 4">
+            </div>
+            <div class="gallery-item">
+                <img src="images/photo5.jpg" alt="Event Photo 5">
+            </div>
+            <div class="gallery-item">
+                <img src="images/photo6.jpg" alt="Event Photo 6">
+            </div>
+            <div class="gallery-item">
+                <img src="images/photo7.jpg" alt="Event Photo 7">
+            </div>
+            <div class="gallery-item">
+                <img src="images/photo8.jpg" alt="Event Photo 8">
+            </div>
+        </div>
+    </section>
+
+    <style>
+        /* Gallery-specific CSS */
+        .gallery {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 1.5rem;
+            margin-top: 2rem;
+        }
+
+        .gallery-item {
+            overflow: hidden;
+            border-radius: 10px;
+            transition: all 0.3s ease;
+        }
+
+        .gallery-item img {
+            width: 100%;
+            height: auto;
+            display: block;
+            transition: transform 0.3s ease;
+        }
+
+        .gallery-item:hover img {
+            transform: scale(1.05);
+        }
+
+        @media (width < 900px) {
+            .gallery {
+                grid-template-columns: repeat(2, 1fr);
+            }
+        }
+
+        @media (width < 600px) {
+            .gallery {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</body>
+</html>
